@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "637249804342",
+    "firebase_url": "https://meiten-b1a09.firebaseio.com",
+    "project_id": "meiten-b1a09",
+    "storage_bucket": "meiten-b1a09.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637249804342:android:55f98be5403aa914",
+        "android_client_info": {
+          "package_name": "com.example.luvkush.meiten"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "637249804342-a3h1pd563hhkeajr57i4v5gd4ag87dj6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.luvkush.meiten",
+            "certificate_hash": "cf62c20cfac8cf2187b8ef6755385e6a68f425c8"
+          }
+        },
+        {
+          "client_id": "637249804342-m9rls12pksl2q8p6s8m4cb6p7tk930cq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb4VI_hEa2XJ6o6NX9Oo-TIXdPjn4Zn4s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "637249804342-m9rls12pksl2q8p6s8m4cb6p7tk930cq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
