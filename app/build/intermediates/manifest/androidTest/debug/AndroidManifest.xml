@@ -13,7 +13,7 @@
         android:label="Tests for com.example.luvkush.meiten"
         android:targetPackage="com.example.luvkush.meiten" />
 
-    <application>
+    <application android:debuggable="true" >
         <uses-library android:name="android.test.runner" />
     </application>
 

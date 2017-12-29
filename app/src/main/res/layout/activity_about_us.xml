@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:layout_height="wrap_content"
+    android:background="@drawable/universityimage">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="19dp"
+        android:textColor="#3A4FA6"
+        android:textStyle="bold"
+        android:text="NIIT University is dedicated towards forging strong industry linkages as one of its core principles.The Centre for Industry Collaboration (CIC) assists students in their endeavours to enrich their education, careers and lives and make lifelong contributions to society.
+
+The CIC of NIIT University is a centralised body, headed by a full-time placement specialist. To facilitate career development, our placement specialist works with senior faculty coordinators from the University along with student representatives from each domain of Engineering and Management studies. The CIC helps the students identify and obtain internships, research fellowships, professional and graduate school opportunities that enrich their lives."
+        android:layout_margin="10dp" />
+</LinearLayout>

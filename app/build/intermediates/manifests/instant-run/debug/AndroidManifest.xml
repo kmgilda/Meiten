@@ -8,15 +8,19 @@
         android:minSdkVersion="15"
         android:targetSdkVersion="25" />
 
-    <!-- Include required permissions for Google Mobile Ads to run -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Optional permission for Analytics to run. -->
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <meta-data
         android:name="android.support.VERSION"
-        android:value="25.3.1" /> <!-- Permissions required for GCM -->
+        android:value="25.3.1" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Optional permission for Analytics to run. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Permissions required for GCM -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
 
     <permission
         android:name="com.example.luvkush.meiten.permission.C2D_MESSAGE"
@@ -24,34 +28,125 @@
 
     <uses-permission android:name="com.example.luvkush.meiten.permission.C2D_MESSAGE" />
 
-    <uses-feature
-        android:glEsVersion="0x00020000"
-        android:required="true" />
-
     <application
         android:allowBackup="true"
+        android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.luvkush.meiten.MainActivity" >
+        <activity
+            android:name="com.example.luvkush.meiten.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.luvkush.meiten.Welcome_Here" />
+        <activity android:name="com.example.luvkush.meiten.StudentLanding" />
         <activity android:name="com.example.luvkush.meiten.adminLanding" />
-        <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+        <activity android:name="com.example.luvkush.meiten.adminSide_FAQ" >
+            <intent-filter>
+                <action android:name="com.example.lavkush.mieten.faq" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.luvkush.meiten.contact" >
+            <intent-filter>
+                <action android:name="com.example.lavkush.mieten.contact" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.luvkush.meiten.about" >
+            <intent-filter>
+                <action android:name="com.example.lavkush.mieten.about" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.luvkush.meiten.approvedprofile"
+            android:parentActivityName="com.example.luvkush.meiten.adminLanding" >
+            <intent-filter>
+                <action android:name="com.example.lavkush.mieten.approveprofile" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.luvkush.meiten.insertcompany"
+            android:parentActivityName="com.example.luvkush.meiten.adminLanding" >
+            <intent-filter>
+                <action android:name="com.example.lavkush.mieten.insertcompany" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.luvkush.meiten.viewprofile"
+            android:parentActivityName="com.example.luvkush.meiten.adminLanding" >
+            <intent-filter>
+                <action android:name="com.example.lavkush.mieten.viewprofile" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.luvkush.meiten.TrainingActivity"
+            android:parentActivityName="com.example.luvkush.meiten.adminLanding" />
+        <activity android:name="com.example.luvkush.meiten.SamplePaperUpload" />
+        <activity android:name="com.example.luvkush.meiten.ListAdapter_Company" />
+        <activity
+            android:name="com.example.luvkush.meiten.StudentHome"
+            android:parentActivityName="com.example.luvkush.meiten.StudentLanding" />
+        <activity
+            android:name="com.example.luvkush.meiten.AdminSide_FAQ_Answer"
+            android:parentActivityName="com.example.luvkush.meiten.adminLanding" />
+        <activity
+            android:name="com.example.luvkush.meiten.StudentSide_FAQ"
+            android:parentActivityName="com.example.luvkush.meiten.StudentLanding" />
+        <activity
+            android:name="com.example.luvkush.meiten.StudentSide_FAQ_QuestAns"
+            android:parentActivityName="com.example.luvkush.meiten.StudentSide_FAQ" />
+        <activity
+            android:name="com.example.luvkush.meiten.Student_side_training"
+            android:parentActivityName="com.example.luvkush.meiten.StudentLanding" />
+        <activity
+            android:name="com.example.luvkush.meiten.Student_account"
+            android:parentActivityName="com.example.luvkush.meiten.StudentLanding" />
+        <activity android:name="com.example.luvkush.meiten.CVupload" />
+        <activity android:name="com.example.luvkush.meiten.profileDisplay" />
+        <activity
+            android:name="com.example.luvkush.meiten.StudentSide_Notification"
+            android:parentActivityName="com.example.luvkush.meiten.StudentLanding" />
+
+        <receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver" />
+
+        <service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService" />
+        <service android:name="com.google.android.gms.cast.framework.ReconnectionService" />
+
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+Service handling Google Sign-In user revocation. For apps that do not integrate with
+            Google Sign-In, this service will never be started.
+        -->
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:theme="@android:style/Theme.Translucent" />
-        <activity
-            android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity"
-            android:theme="@style/Theme.IAPTheme" />
         <activity
             android:name="com.google.android.gms.appinvite.PreviewActivity"
             android:exported="true"
@@ -62,11 +157,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-        <receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver" />
-
-        <service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService" />
-        <service android:name="com.google.android.gms.cast.framework.ReconnectionService" />
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <!--
  FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"
@@ -85,6 +179,7 @@
 
         <activity
             android:name="com.google.android.gms.tagmanager.TagManagerPreviewActivity"
+            android:exported="true"
             android:noHistory="true" > <!-- optional, removes the previewActivity from the activity stack. -->
             <intent-filter>
                 <data android:scheme="tagmanager.c.com.example.luvkush.meiten" />
@@ -104,6 +199,7 @@
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
             android:enabled="true"
+            android:exported="true"
             android:permission="android.permission.INSTALL_PACKAGES" >
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
@@ -114,6 +210,11 @@
             android:name="com.google.android.gms.measurement.AppMeasurementService"
             android:enabled="true"
             android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <receiver
             android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
@@ -121,7 +222,6 @@
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
                 <category android:name="com.example.luvkush.meiten" />
             </intent-filter>
@@ -151,32 +251,13 @@
             android:exported="false"
             android:initOrder="100" />
 
-        <activity
-            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-            android:excludeFromRecents="true"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <!--
-Service handling Google Sign-In user revocation. For apps that do not integrate with
-            Google Sign-In, this service will never be started.
-        -->
-        <service
-            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-            android:exported="true"
-            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
-
-        <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
         <provider
-            android:name="com.android.tools.fd.runtime.InstantRunContentProvider"
-            android:authorities="com.example.luvkush.meiten.com.android.tools.fd.runtime.InstantRunContentProvider"
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="com.example.luvkush.meiten.com.android.tools.ir.server.InstantRunContentProvider"
             android:multiprocess="true" />
     </application>
 

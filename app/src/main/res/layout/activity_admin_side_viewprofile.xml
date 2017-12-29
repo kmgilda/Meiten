@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.luvkush.meiten.viewprofile"
+    android:orientation="vertical"
+    android:background="@drawable/universityimage"
+    >
+
+
+
+    <EditText
+        android:id="@+id/StudentName"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:hint="Search for Students"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"/>
+
+    <Button
+        android:id="@+id/SearchButton"
+        android:layout_width="154dp"
+        android:layout_height="47dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_btn"
+
+        android:text="Search"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="80dp" />
+
+    <ListView
+        android:id="@+id/listview3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        >
+
+    </ListView>
+
+
+</LinearLayout>

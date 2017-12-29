@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "637249804342-271bvfe8oul7c9l7s64qvaqt6culbgp3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.luvkush.meiten",
+            "certificate_hash": "6785a32f353a2a9c26a6404ae28c38257c040def"
+          }
+        },
+        {
+          "client_id": "637249804342-aob2p3e3nf48ncp49nn5rk6sgmocnu6t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.luvkush.meiten",
+            "certificate_hash": "f3181e164aa69fccabafd34b912634cac3f3574d"
+          }
+        },
+        {
           "client_id": "637249804342-a3h1pd563hhkeajr57i4v5gd4ag87dj6.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

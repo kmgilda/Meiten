@@ -1,3 +1,38 @@
 <resources>
-    <string name="app_name">Meiten</string>
+    <string name="app_name">Mieten</string>
+    <string name="drawer_open">Open Navigation Drawer</string>
+    <string name="drawer_close">Close Navigation Drawer</string>
+    <string name="qustion">Enter Question</string>
+    <string name="buttonText">Submit Question</string>
+    <string name="Send">Send Answer</string>
+    <string name="EnterANS">Enter Answer</string>
+    <string name="goTo">View Questions</string>
+    <string name="select_preferences">Select Preferences</string>
+    <string name="profile">Profile</string>
+    <string name="etname">Name</string>
+    <string name="etenrollment">Enrollment Number</string>
+    <string name="etemail">University\'s Email ID</string>
+    <string name="etphone">Contact Number</string>
+    <string name="etbatch">Branch &amp; Batch e.g. 2015 CSE</string>
+    <string name="select">Select</string>
+    <string name="nameofpdf">Name for PDF</string>
+    <string name="upload">Upload CV</string>
+    <string name="btnsubmit">Submit</string>
+    <string name="view">View</string>
+    <string name="logout">Logout</string>
+    <string name="typeN">Enter Notification to send</string>
+    <string name="notificationButton">Send Notification</string>
+    <string name="Receive_Notification">Receive Notification</string>
+    <string-array name="available_choices">
+        <item>Marketing</item>
+        <item>Programming</item>
+        <item>Content Writing</item>
+        <item>Web Development</item>
+        <item>Android Application Development</item>
+        <item>Cloud Computing</item>
+        <item>Architecture</item>
+        <item>Accounts</item>
+        <item>Fashion Designing</item>
+    </string-array>
+
 </resources>

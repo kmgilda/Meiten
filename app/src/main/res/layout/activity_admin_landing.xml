@@ -1,24 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.luvkush.meiten.adminLanding">
+    tools:context="com.example.luvkush.meiten.adminLanding"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/universityimage"
+    >
+    >
 
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/textViewUserEmail"
-        android:layout_gravity="center_horizontal" />
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp">
+
+        <Button
+            android:id="@+id/Training"
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_btn"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:text="Traning Data" />
+
+        <Button
+            android:id="@+id/ViewProfile"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_btn"
+            android:text="View profile"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            />
+
+        <Button
+            android:id="@+id/FAQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_btn"
+            android:text="FAQ"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:layout_marginBottom="60dp">
+
+        <Button
+            android:id="@+id/InsertCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@drawable/rounded_btn"
+            android:text="Insert Company"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            />
+
+        <Button
+            android:id="@+id/ApprovedProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@drawable/rounded_btn"
+            android:text="Approve Profile"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/About"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_btn"
+            android:text="About"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/Contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_btn"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:text="Contact"
+      />
+
 
     <Button
+        android:id="@+id/Logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rounded_btn"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         android:text="Logout"
-        android:id="@+id/buttonLogout"
-        android:layout_gravity="center_horizontal" />
+ />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

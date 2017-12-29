@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.luvkush.meiten">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,15 +11,69 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Welcome_Here" />
-        <activity android:name=".adminLanding"></activity>
+        <activity android:name=".StudentLanding" />
+        <activity android:name=".adminLanding" />
+        <activity android:name=".adminSide_FAQ">
+            <intent-filter>
+                <action android:name="com.example.lavkush.mieten.faq" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".contact" >
+            <intent-filter>
+                <action android:name="com.example.lavkush.mieten.contact" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".about">
+            <intent-filter>
+                <action android:name="com.example.lavkush.mieten.about" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".approvedprofile" android:parentActivityName=".adminLanding">
+            <intent-filter>
+                <action android:name="com.example.lavkush.mieten.approveprofile" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".insertcompany" android:parentActivityName=".adminLanding">
+            <intent-filter>
+                <action android:name="com.example.lavkush.mieten.insertcompany" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".viewprofile" android:parentActivityName=".adminLanding">
+            <intent-filter>
+                <action android:name="com.example.lavkush.mieten.viewprofile" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".TrainingActivity" android:parentActivityName=".adminLanding"/>
+        <activity android:name=".SamplePaperUpload" />
+        <activity android:name=".ListAdapter_Company" />
+        <activity android:name=".StudentHome" android:parentActivityName=".StudentLanding"/>
+        <activity android:name=".AdminSide_FAQ_Answer" android:parentActivityName=".adminLanding"/>
+        <activity android:name=".StudentSide_FAQ" android:parentActivityName=".StudentLanding"/>
+        <activity android:name=".StudentSide_FAQ_QuestAns" android:parentActivityName=".StudentSide_FAQ"/>
+        <activity android:name=".Student_side_training" android:parentActivityName=".StudentLanding"/>
+        <activity android:name=".Student_account" android:parentActivityName=".StudentLanding"/>
+        <activity android:name=".CVupload" />
+        <activity android:name=".profileDisplay" />
+        <activity android:name=".StudentSide_Notification" android:parentActivityName=".StudentLanding"></activity>
     </application>
 
 </manifest>

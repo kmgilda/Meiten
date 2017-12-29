@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="vertical"
+    tools:context="com.example.luvkush.meiten.StudentSide_FAQ"
+    android:background="@drawable/universityimage"
+    >
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="364dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/qustion"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="122dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="25dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="143dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_btn"
+        android:onClick="sendQuestion"
+        android:text="@string/buttonText"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="220dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dp"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="129dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_btn"
+        android:onClick="ViewQuestions"
+        android:text="@string/goTo"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="304dp"
+        android:layout_gravity="center"/>
+</LinearLayout>
+

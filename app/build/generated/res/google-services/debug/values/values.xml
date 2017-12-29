@@ -7,4 +7,5 @@
     <string name="google_app_id" translatable="false">1:637249804342:android:55f98be5403aa914</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCb4VI_hEa2XJ6o6NX9Oo-TIXdPjn4Zn4s</string>
     <string name="google_storage_bucket" translatable="false">meiten-b1a09.appspot.com</string>
+    <string name="project_id" translatable="false">meiten-b1a09</string>
 </resources>
